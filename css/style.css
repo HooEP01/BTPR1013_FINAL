@@ -12401,7 +12401,7 @@ input.star {
   float: left;
 }
 label.star {
-  float: left;
+  float: right;
   padding: 0 5px;
   font-size: 28px;
   color: #444;
@@ -12436,7 +12436,7 @@ input.star2 {
   display: none;
 }
 label.star2 {
-  float: left;
+  float: right;
   padding: 0 5px;
   font-size: 28px;
   color: #444;
