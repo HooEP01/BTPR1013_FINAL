@@ -2697,12 +2697,7 @@ textarea.form-control.is-invalid {
   color: #212529;
   text-decoration: none;
 }
-.btn:focus,
-.btn.focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
+
 .btn.disabled,
 .btn:disabled {
   opacity: 0.65;
@@ -2714,41 +2709,6 @@ textarea.form-control.is-invalid {
 a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-.btn-primary:hover {
-  color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
-}
-.btn-primary:focus,
-.btn-primary.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-}
-.btn-primary.disabled,
-.btn-primary:disabled {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: #0062cc;
-  border-color: #005cbf;
-}
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.btn-primary:not(:disabled):not(.disabled).active:focus,
-.show > .btn-primary.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
 
 .btn-secondary {
@@ -11037,7 +10997,8 @@ h5,
 }
 .btn:hover,
 .btn:active,
-.btn:focus {
+.btn:focus,
+.btn:active {
   outline: none;
 }
 .btn.btn-primary {
@@ -11050,6 +11011,7 @@ h5,
   background: transparent;
   color: #ffa323;
 }
+
 .btn.btn-primary.btn-outline-primary {
   border: 1px solid #ffa323;
   background: transparent;
@@ -11058,6 +11020,21 @@ h5,
 .btn.btn-primary.btn-outline-primary:hover {
   border: 1px solid transparent;
   background: #ffa323;
+  color: #fff;
+}
+.btn.btn-primary:focus {
+  background: #ffa323;
+  border: 1px solid #ffa323;
+  color: #fff;
+}
+.btn.btn-primary:visited {
+  background: #ffa323;
+  border: 1px solid #ffa323;
+  color: #fff;
+}
+.btn.btn-primary:active {
+  background: #ffa323;
+  border: 1px solid #ffa323;
   color: #fff;
 }
 .btn.btn-white {
@@ -11470,7 +11447,7 @@ h5,
 
 .form-control {
   height: 52px !important;
-  background: #fff !important;
+  background: #fff;
   color: #000000 !important;
   font-size: 16px;
   border-radius: 0px;
@@ -12465,4 +12442,61 @@ label.star2:hover {
 label.star2:before {
   content: "\f006";
   font-family: FontAwesome;
+}
+
+input.form-control[type="text"],
+input.form-control[type="email"],
+input.form-control[type="password"],
+input.form-control[type="tel"] {
+  width: 100%;
+  background-color: #fff;
+}
+
+input.form-control[type="text"]:focus,
+input.form-control[type="email"]:focus,
+input.form-control[type="password"]:focus,
+input.form-control[type="tel"]:focus {
+  outline: 0;
+  background: #fff;
+  border-color: rgb(250, 229, 210);
+}
+
+input.form-control[type="text"]:valid,
+input.form-control[type="email"]:valid,
+input.form-control[type="password"]:valid,
+input.form-control[type="tel"]:valid {
+  background: url("https://webdevtrick.com/wp-content/uploads/check-icon.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: center;
+}
+
+input.form-control[type="text"]:valid + label,
+input.form-control[type="email"]:valid + label,
+input.form-control[type="password"]:valid + label,
+input.form-control[type="tel"]:valid + label {
+  opacity: 0;
+}
+
+input.form-control[type="text"]:invalid:not(:focus):not(:placeholder-shown),
+input.form-control[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+input.form-control[type="password"]:invalid:not(:focus):not(:placeholder-shown),
+input.form-control[type="tel"]:invalid:not(:focus):not(:placeholder-shown) {
+  background: url("https://webdevtrick.com/wp-content/uploads/xicon.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: center;
+}
+
+input.form-control[type="text"]:invalid:not(:focus):not(:placeholder-shown)
+  + label,
+input.form-control[type="email"]:invalid:not(:focus):not(:placeholder-shown)
+  + label,
+input.form-control[type="password"]:invalid:not(:focus):not(:placeholder-shown)
+  + label,
+input.form-control[type="tel"]:invalid:not(:focus):not(:placeholder-shown)
+  + label {
+  opacity: 0;
 }

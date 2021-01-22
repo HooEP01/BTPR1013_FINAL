@@ -560,53 +560,6 @@
     </section>
 	<!--END manu-->
 
-	<!--
-	<script>
-		function GEEKFORGEEKS() {
-			var name = document.forms["RegForm"]["Name"];
-			var email = document.forms["RegForm"]["Email"];
-			var phone = document.forms["RegForm"]["Phone"];
-			var what = document.forms["RegForm"]["Date"];
-			var what = document.forms["RegForm"]["Com"];
-			var password = document.forms["RegForm"]["Password"];
-			var address = document.forms["RegForm"]["Address"];
-
-			if (name.value == "") {
-				window.alert("Please enter your name.");
-				name.focus();
-				return false;
-			}
-
-			if (address.value == "") {
-				window.alert("Please enter your address.");
-				address.focus();
-				return false;
-			}
-
-			if (email.value == "") {
-				window.alert(
-					"Please enter a valid e-mail address.");
-				email.focus();
-				return false;
-			}
-			if (phone.value == "0") {
-	
-				window.alert(
-					"Please enter your telephone number.");
-				phone.focus();
-				return false;
-			}
-
-			if (password.value == "") {
-				window.alert("Please enter your password");
-				password.focus();
-				return false;
-			}
-			return true;
-		} 
-	</script>
-	-->
-
 	<!--START reservation-->
     <section class="ftco-section ftco-no-pt ftco-no-pb">
 		<div class="container-fluid px-0">
@@ -616,60 +569,60 @@
 						<span class="subheading">Book a table</span>
 						<h2 class="mb-4">Make Reservation</h2>
 					</div>
-					<!--START form-->  
-					<!--<form name="RegForm" action="#" onsubmit="return GEEKFORGEEKS()" method="post">-->
+					<!--START form-->
+					
 					<form action="#" method="post">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="">Name</label>
-									<input type="text" name="Name" class="form-control"  placeholder="Your Name" required>
+									<input type="text" name="Name" id="name" class="form-control" placeholder="Your Name" required>
 								</div>
 							</div>
-							
+					
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="">Email</label>
-									<input type="email" name="Email" class="form-control" placeholder="Your Email" required> 
+									<input type="email" name="Email" class="form-control" placeholder="Your Email" required>
 								</div>
 							</div>
-
+					
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="">Phone</label>
-									<input type="text"  name="Phone" class="form-control" placeholder="Phone" pattern="[0-9]{10}" required>
+									<input type="text" name="Phone" class="form-control" placeholder="Phone" pattern="[0-9]{10}" required>
 								</div>
 							</div>
-
+					
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="">Date</label>
-									<input type="text" name="Date" class="form-control" id="book_date" placeholder="Date" required>
+									<input type="date" name="Date" class="form-control" placeholder="Date" required>
 								</div>
 							</div>
-
+					
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="">Time</label>
-									<input type="text" class="form-control" id="book_time" placeholder="Time" required>
+									<input type="time" class="form-control" placeholder="Time" required>
 								</div>
 							</div>
-
+					
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="">Person</label>
 									<div class="select-wrap one-third">
-									<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-									<select name="Person" id="" class="form-control">
-										<option value="">1</option>
-										<option value="">2</option>
-										<option value="">3</option>
-										<option value="">4+</option>
-									</select>
+										<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+										<select name="Person" id="" class="form-control">
+											<option value="">1</option>
+											<option value="">2</option>
+											<option value="">3</option>
+											<option value="">4+</option>
+										</select>
 									</div>
 								</div>
 							</div>
-
+					
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="">Comment</label>
